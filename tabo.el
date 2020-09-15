@@ -35,9 +35,48 @@
 (require 'cl-lib)
 (require 'f)
 
+(require 'tabulated-list)
+
 (defgroup tabo nil
   "Generic completion and narrowing mechanism."
   :group 'convenience)
+
+(defvar tabo-text ""
+  "Hold minibuffer input.")
+
+(defvar tabo--candidates '()
+  "")
+
+(defun tabo-completion-in-region (start end collection &optional predicate)
+  "An Tabo function suitable for `completion-in-region-function'."
+  )
+
+;;;###autoload
+(defun tabo-completing-read (prompt collection
+                                    &optional predicate require-match initial-input
+                                    history def inherit-input-method)
+  "Read a string in the minibuffer, with completion."
+  )
+
+(define-minor-mode tabo-mode
+  "Toggle Tabo mode on or off."
+  :group 'tabo
+  :global t
+  :keymap tabo-mode-map
+  :lighter " tabo"
+  (if tabo-mode
+      (progn
+        (setq completing-read-function 'tabo-completing-read)
+        (setq completion-in-region-function 'tabo-completion-in-region))
+    (setq completing-read-function 'completing-read-default)
+    (setq completion-in-region-function 'completion--in-region)))
+
+(cl-defun tabo-read (prompt collection
+                            &key predicate action
+                            keymap sort preselect
+                            header)
+  ""
+  )
 
 (provide 'tabo)
 ;;; tabo.el ends here
