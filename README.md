@@ -4,6 +4,8 @@
 # tabo
 > Generic completion and narrowing mechanism.
 
+Completion framework that uses [tabulated-list](https://www.emacswiki.org/emacs/TabulatedListMode) as core.
+
 ## Contribution
 
 If you would like to contribute to this project, you may either
