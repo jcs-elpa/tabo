@@ -39,7 +39,12 @@
 
 (defgroup tabo nil
   "Generic completion and narrowing mechanism."
-  :group 'convenience)
+  :prefix "tabo-"
+  :group 'convenience
+  :link '(url-link :tag "Repository" "https://github.com/jcs-elpa/tabo"))
+
+(defconst tabo--buffer-name "*tabo*"
+  "Buffer name for displays.")
 
 (defvar tabo-text ""
   "Hold minibuffer input.")
