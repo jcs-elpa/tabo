@@ -8,6 +8,13 @@
 
 Completion framework that uses [tabulated-list](https://www.emacswiki.org/emacs/TabulatedListMode) as core.
 
+## Related Packages
+
+* [helm](https://github.com/emacs-helm/helm) - Emacs incremental completion and selection narrowing framework
+* [ivy](https://github.com/abo-abo/swiper) - a generic completion frontend for Emacs
+* [selectrum](https://github.com/raxod502/selectrum) - Better solution for incremental narrowing in Emacs.
+* [snails](https://github.com/manateelazycat/snails) - A modern, easy-to-expand fuzzy search framework
+
 ## Contribution
 
 If you would like to contribute to this project, you may either
